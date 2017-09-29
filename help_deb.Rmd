@@ -1,0 +1,11 @@
+---
+title: "help_deb"
+author: "Bastien Tran"
+date: "21 septembre 2017"
+output: html_document
+---
+
+Aide à venir sur:
+
+* expansion du débat. 
+* raffinement du débat. 

@@ -1,0 +1,12 @@
+---
+title: "help_lex"
+author: "Bastien Tran"
+date: "21 septembre 2017"
+output: html_document
+---
+
+Il s'agit d'identifier autant que possibles les actes de communication qui relèvent de la:
+
+* __description__:  lorsque sont détaillés les propriétés ou composants d'une notion, d'un concept, d'une idée ou d'un objet ou plus généralement lorqu'une définition d'une notion, d'un concept, d'une idée ou d'un objet est proposée ou fournie.
+
+* __classification__: lorsqu'une notion, un concept, une idée ou un objet se voient attribuer un terme ou se voient rangés dans une catégorie. Les catégories sont notamment celles suggérées dans l'énoncé du travail demandé aux étudiants: long terme/court terme, social/environnemental/économique, échelle locale/ échelle globale. D'autre catégories peuvent être utilisées par les participants et leur utilisation identifiée autant que possible. 
