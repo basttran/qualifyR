@@ -6,11 +6,12 @@ Many improvements can be done, may need to be retought entirely but currently se
 
 __Please note the following: 
 
-* input files and questionnaires are currently 'hardcoded' -- I hope it is quite understandable and transferable as is though.
+* input files and questionnaires are currently 'hardcoded' -- I hope it is understandable and transferable enough as is though.
 * the app relies on dynamically creating questionnaire items and associated observers, for now it is preferable to use small dataframes as input data (aging desktop pc: ~300 rows is fine). 
 
 __TO DO:
 
+* Un-hardcode all the things!!!    \o \o \o
 * Provide example data
 * Allow the user to provide their input file(s) and download their filled forms as dataframes (no need to write files to server as long as we deal with sensible data sizes)
 * Reduce the latency when loading data or circumvent with pagination system
