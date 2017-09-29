@@ -1,8 +1,8 @@
 # qualifyR
 _A shinyApp for qualifying text data, typically with discourse analysis in view._
 
-A modest and clumsy app that creates a form for assigning small chunks of texts to categories that are defined by the experimenter. 
-Many improvements can be done, may need to be retought entirely but currently serves my purpose just fine.
+A modest and clumsy app that creates a form for assigning small chunks of texts to categories which are defined by the experimenter. 
+Many improvements can be done, it may need to be retought entirely but currently serves my purpose just fine.
 
 __Please note the following:__
 
@@ -18,4 +18,5 @@ __TO DO:__
 * Progress bar and record confirmations
 * Plot area (you probably do not want to viz' while you label, as rigor often requires. Still, (1) it can be used for demos and (2) may be useful for other activities...?)
 * 'Loose' authentication, if you need the contribution of several labelers
+* Add support for other types of content...?
 
