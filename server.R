@@ -9,12 +9,12 @@ server <- reactiveValues(df = NULL)
 # }
  
 function(input, output, session) {
-  
-  
-
-    output$help <- renderUI({
+#Help text/intstrutions to display
+      output$help <- renderUI({
       if (input$question =='0') {
+        #no questionnaire is chosen, do nothing
         return()
+        #include the apt Rmd in the control panel
       } else if (input$question == '1') {
         includeMarkdown("help_idc.Rmd")
       } else if (input$question == '2') {
@@ -27,11 +27,13 @@ function(input, output, session) {
         includeMarkdown("help_def.Rmd")
       }
     })
+      
         output$qda <- renderUI({
-      if (input$file=='0') {return()}
       if (input$file=='0') {
+        #no file, do nothing
         return()
       } else if (input$question=='1') {
+        #dynamically create the observers for each row in the file, checkboxes are created further down
         isolate(server$df<-readRDS(paste0(input$file)))
         lapply(1:isolate(nrow(server$df)), function (i) {
           observeEvent(input[[paste0("intel_", i)]], {
@@ -112,14 +114,18 @@ function(input, output, session) {
       isolate(server$df<-readRDS(paste0(input$file)))
       wellPanel(id="scroll",
                 lapply(1:isolate(nrow(server$df)), function(i) {
+                  #displaying input data by row
                   fluidRow(
                     renderText("********************************************************************************************************************************************************************************************************************"),
                     column(2,renderText(isolate(server$df[i,1]))),
                     column(2,renderText(isolate(server$df[i,4]))),
                     column(2,renderText(isolate(server$df[i,5]))),
                     column(4,renderText(isolate(server$df[i,6]))),
+                    #creates the checkboxes
                     if (input$question == '0') {
+                      #no questionnaire do nothing
                       return()
+                      # creates the checkboxes accroding to the selected questionnaire
                     } else if (input$question == '1') { 
                       column(2,checkboxInput(paste0("intel_",i),"intel",value=isolate(server$df[i,7])),
                              checkboxInput(paste0("model_",i),"model",value=isolate(server$df[i,8])),

@@ -1,3 +1,4 @@
+#Add to break down the original file: 6000 rows was impossible to load in my context
 files<-list(
   "Aucun fichier choisi" = 0,
   "A2T1" = "A2T1",
@@ -27,18 +28,26 @@ files<-list(
   "C4T1" = "C4T1",
   "C4T2" = "C4T2",
   "C4T3" = "C4T3")
+
 question<-list("Aucun questionnaire" = 0,
                "décision"= 1,
                "activité" = 2,
                "débat" = 3,
                "lexique" = 4,
                "résolution" = 5)
+
+
   fluidPage(title = 'ZLB QDAP',
           sidebarLayout(
+            #the control panel
             sidebarPanel(style = "position:fixed;width:inherit;",
+                         #Choose a file to label
                          selectInput("file","Fichier",choices = files),
+                         #We want the user to ignore other questionnaires while filling one
                          selectInput("question","Questionnaire", choices=question),
+                         #Help texts or labeling task instructions
                          uiOutput("help")),
+            #A table of text strings (depending on the file) with checkboxes (depending on the questionnaire)
             mainPanel(uiOutput("qda"))
           )
 )

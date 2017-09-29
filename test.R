@@ -1,3 +1,4 @@
+#Breaking down the input file into several
 df<-read.csv("zlb_qda.csv", header=TRUE, sep="\t", quote ="\"", stringsAsFactors =FALSE)
 A2<-df[df$group=="A2",]
 B2<-df[df$group=="B2",]
